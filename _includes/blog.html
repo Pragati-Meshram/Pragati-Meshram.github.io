@@ -1,4 +1,4 @@
-<!-- .blog -->
+.blog -->
 <div id="blog" class="content_2">
 <h1 class="h-bloc">Blog - My Blog</h1><br> 
 
@@ -740,36 +740,44 @@
                             </div>
 
                             <div class="title_content">
-                                <div class="text_content">BLOG POST IMAGE</div>
+                                <div class="text_content">What is Domain Adaptation?</div>
                                 <div class="clear"></div>
                             </div>
 
 
-                            <p class="caps">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with.</p>
+                            <p class="caps">Domain adaptation solves a learning problem in a target domain by utilising the training data in a different but related source domain. This concept can be used in real life problems like finding labels of different domain samples, etc. Intuitively, discovering a good feature representation across domains is crucial. The main idea behind this is to use knowledge from source data to classify target data. The main technical difficulty of domain adaptation is to formally reduce the distribution discrepancy across different domains. We can apply standard Deep learning methods to train classifier models in the source domain for use in the target domain considering Domain shift between two domains.</p>
+                            <br>
+                            <h1>Divergence Based Method</h1>
 
+                            <p>This method is Divergence based domain Adaptation . The idea is that, after aligning two domains, the feature space will be almost aligned. But considering that there can be some domain shift (as shown in figure), feeding images directly through the network after domain aligning is not going to be very good idea, we can do that more precisely. As most of the features will be common in target and source domain, implies source domain classifier can classify correctly most of the target sample. So keeping a threshold for high class prediction (nearly 0.98, according to scenario) will work to classify only highly matching (regarding features) samples, which will act as a training data-set along with the actual training (source) data-set in next iterations of training.</p> 
+                            This method dramatically minimises the distance between domain distributions by adding more features from target samples for further training in training data-set. The effectiveness and efficiency of the approach has been verified by experiments on Office-31 data-set.</p>
+                           
+
+                            <p>We can use same network for training as mentioned in paper Improved Open set Domain Adaptation with Back propagation . The loss function will be such that to minimise the domain shift between the two domains using KL-Divergence and to minimise the cross-entropy loss of training data-set (source). The network (DANN) will be consist of two losses, the classification loss and the domain divergence loss. It contains a gradient reversal layer to match the feature distributions. While training Domain divergence will be minimised for all target and source samples and classification loss will be minimised for source samples.</p>
+                           
                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
 
                             <div class="col-md-12 first">
                                 <div class="info">
                                     <div>
-                                        <span class="tag">#php</span>
-                                        <span class="tag">#web</span>
-                                        <span class="tag">#web design</span>
+                                        <span class="tag">#Deep Learning</span>
+                                        <span class="tag">#Domain Adaptation</span>
+                                        <!-- <span class="tag">#web design</span> -->
                                     </div>
 
 
                                     <ul class="info-post">
-                                        <li><i class="glyphicon glyphicon-comment"></i> 2 Comments</li>
-                                        <li><i class="glyphicon glyphicon-time"></i> January 31, 2014</li>
-                                        <li><i class="glyphicon glyphicon-user"></i> by Jane Doe</li>
-                                        <li><i class="glyphicon glyphicon-tag"></i> Photoshop</li>
+                                        <!-- <li><i class="glyphicon glyphicon-comment"></i> 2 Comments</li> -->
+                                        <li><i class="glyphicon glyphicon-time"></i> June 10, 20</li>
+                                        <li><i class="glyphicon glyphicon-user"></i> by Pragati Meshram</li>
+                                        <!-- <li><i class="glyphicon glyphicon-tag"></i> Photoshop</li> -->
                                     </ul>
                                 </div>
 
                                 <div class="clear"></div>      
 
 
-                                <div class="about_author">
+                               <!--  <div class="about_author">
                                     <div class="title_content" style="margin-bottom:10px">
                                         <div class="text_content">BILL GATES</div>
                                         <div class="clear"></div>
@@ -795,11 +803,11 @@
 
                                     <div class="clear"></div>
                                 </div>
-
+ -->
                                 <div class="clear"></div>      
 
 
-                                <div class="post_comments">
+                                <!-- <div class="post_comments">
 
                                     <div class="title_content">
                                         <div class="text_content">7 Comments</div>
@@ -833,7 +841,7 @@
                                                 <div class="clear"></div>
                                             </div>
                                             <div class="clear"></div>
-                                        </div><!-- .comments -->
+                                        </div>
 
                                         <div class="comment">
                                             <img src="http://placehold.it/100x100" width="100" height="100" alt="img" />
@@ -858,7 +866,7 @@
                                                 <div class="clear"></div>
                                             </div>
                                             <div class="clear"></div>
-                                        </div><!-- .comments -->
+                                        </div>
 
                                         <div class="comment">
                                             <img src="http://placehold.it/100x100" width="100" height="100" alt="img" />
@@ -883,7 +891,7 @@
                                                 <div class="clear"></div>
                                             </div>
                                             <div class="clear"></div>
-                                        </div><!-- .comments -->
+                                        </div>
 
                                         <div class="comment">
                                             <img src="http://placehold.it/100x100" width="100" height="100" alt="img" />
@@ -896,16 +904,16 @@
                                                 amet cursus libero. In fringilla egestas ornare.
                                             </div>
                                             <div class="clear"></div>
-                                        </div><!-- .comments -->
+                                        </div>
 
 
 
-                                    </div><!-- .post_comments -->
+                                    </div> --><!-- .post_comments -->
 
                                     <div class="clear"></div>      
 
 
-                                    <div class="comment_form">
+                                    <!-- <div class="comment_form">
 
                                         <div class="title_content">
                                             <div class="text_content">Leave A Comment</div>
@@ -928,12 +936,12 @@
                                                 <textarea name="message" cols="88" rows="6" class="form-control" id="inputError" placeholder="Your Comment..."></textarea>
                                             </p>
                                             <input type="reset" name="reset" value="CLEAR" class="reset">
-                                            <!--<input type="submit" name="submit" value="Post Comment" class="submit">-->
+                                           
                                             <button class="submit" data-toggle="modal" data-target=".bs-example-modal-sm">Post Comment</button>
                                         </form>                        
                                         <div class="clear"></div>
 
-                                    </div>
+                                    </div> -->
                                 </div>
 
 
@@ -977,4 +985,4 @@
     </div>
 </div>
                                             </div>
-                                            <!-- End .blog -->
+                                            <!-- End .blog
